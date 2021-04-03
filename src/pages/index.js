@@ -9,7 +9,6 @@ import {
   GoogleOutlined
 } from '@ant-design/icons';
 import Carousel,{ consts } from "react-elastic-carousel";
-import Icon from "../Components/Icon";
 import Navbar from "../Components/Navbar";
 import Particles from 'react-particles-js';
 
