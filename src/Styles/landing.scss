@@ -58,7 +58,7 @@ p {
 // background-image: url(/landing-page/first-screen-ellipse.png);
 .landing-page-container .section1 {
   background: linear-gradient(45deg, #65d2a5 0%, #2fbcd8 100%), #ffffff !important;
-  height: 100vh;
+  min-height: 100vh;
   div.img-me {
     background-image: url(../images/me.jpg);
     background-size: cover;
@@ -71,9 +71,11 @@ p {
   display: inline-flex;
   transform: rotateZ(45deg);
   color: black;
+  font-size: 14pt;
+  margin-right: 14px;
   .anticon {
     transform: rotateZ(-45deg);
-    transition: all ease .6s;
+    transition: all ease .3s;
   }
   transition: all ease .3s;
   &:hover {

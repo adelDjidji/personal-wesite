@@ -15,30 +15,20 @@ import Particles from 'react-particles-js';
 import "react-image-lightbox/style.css"; // This only needs to be imported once in the app
 import "../Styles/landing.scss";
 
-const { Header,Content } = Layout;
+const { Content } = Layout;
 
 const LIMIT_IS_MOBILE = 610;
 
 export default function Landing() {
   const [navBarWhite,setnavBarWhite] = useState(false);
   const [isMobile,setisMobile] = useState(window.innerWidth < LIMIT_IS_MOBILE);
-  const [draweOpen,setdraweOpen] = useState(false);
-  const [indexSlideshow,setindexSlideshow] = useState(1);
   const [pointer,setpointer] = useState({});
-
-  const Refcarousel2 = createRef();
-  const Ref1 = createRef(); // Reference to section 2 : Video
-  const Ref2 = createRef(); // Reference to section 3 : SlideShow
-  const Ref3 = createRef(); // Reference to section 4 : Features
-  const Ref4 = createRef(); // Reference to section 5 : Membership
 
   useEffect(() => {
     setisMobile(window.innerWidth < LIMIT_IS_MOBILE);
-    window.addEventListener("scroll",handleScroll);
     window.addEventListener("mousemove",mouseMove);
     window.addEventListener("resize",updateDimensions.bind(this));
     return () => {
-      window.removeEventListener("scroll",handleScroll);
       window.removeEventListener("mousemove",mouseMove);
       window.removeEventListener("resize",updateDimensions.bind(this));
     };
@@ -55,28 +45,6 @@ export default function Landing() {
       setisMobile(false);
     }
   };
-
-
-
-  var lastScrollTop = 0;
-  const handleScroll = (e) => {
-    e.preventDefault();
-    const currentScrollTop = e.target.scrollingElement.scrollTop;
-
-    if (currentScrollTop > lastScrollTop) {
-      if (currentScrollTop >= 90 && !navBarWhite) {
-        setnavBarWhite(true);
-      }
-    } else {
-      if (currentScrollTop <= 90 && navBarWhite) {
-        setnavBarWhite(false);
-      }
-    }
-    lastScrollTop = currentScrollTop;
-  };
-
-
-
 
   return (
     <div className="">
@@ -98,7 +66,7 @@ export default function Landing() {
 
               <p style={{ width: '50%' }} className="text-md m-auto mt-8">Adel is a skilled web developer with +4 years on building UI web development with ReactJS , +3 years on full stack development ReactJS and nodeJs. I love building cool software solutions and making them as perfect as possible. I care about cleaning my code just as a beautiful piece of art.
    I am Scrum fundamentals Certified, I am motivated on working with Scum methodology for perfect client satisfaction</p>
-              <div className="social mt-10">
+              <div className="social mt-10 mb-6">
                 <Tooltip title="Email me now!" placement="top">
                   <a href="mailto:djidjik.adel.sp@gmail.com" title="Email"><GoogleOutlined /></a>
                 </Tooltip>
