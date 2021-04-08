@@ -6,7 +6,7 @@
 }
 .landing *,
 h1,
-p {
+p, b {
   font-family: "Cairo", sans-serif;
   font-size: 16px;
 }
@@ -64,6 +64,13 @@ p {
     background-size: cover;
     background-position: center;
   }
+}
+item{
+  outline: none;
+}
+.testmonial{
+  padding: 8vh 13vw;
+  height: 66vh;
 }
 .social a {
   border: solid 1px black;

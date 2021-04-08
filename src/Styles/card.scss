@@ -1,0 +1,48 @@
+.card {
+  min-width: 50vw;
+}
+.card-footer {
+  background: linear-gradient(91.09deg, #44ccff 5.59%, #3de6b4 100%);
+  border-radius: 0px 0px 11px 11px;
+}
+
+.rec.rec-slider-container {
+  margin: 0 auto;
+//   max-width: 52%;
+}
+.rec.rec-pagination {
+  margin-top: 4px !important;
+  margin-bottom: 42px;
+  z-index: 9;
+  .rec-dot {
+    background-color: #0000004d;
+    box-shadow: none;
+    &.rec-dot_active {
+      background-color: #00bcd4;
+      box-shadow: 0 0 1px 3px #3f51b5;
+    }
+  }
+}
+.rec-arrow.rec {
+    transform: translateY(-64px);
+    background-color: transparent;
+    color: #999;
+    box-shadow: none;
+    font-size: 30pt;
+    outline: none;
+    &:hover{
+        background-color: transparent !important;
+        box-shadow: none !important;
+        
+    }
+    &.rec-arrow-right{
+        &:hover{
+            color:#3de6b4 !important;
+        }
+    }
+    &.rec-arrow-left{
+        &:hover{
+            color:#44ccff !important;
+        }
+    }
+}
