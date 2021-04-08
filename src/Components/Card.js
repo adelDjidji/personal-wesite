@@ -2,10 +2,12 @@ import React from 'react';
 import {
     LinkedinFilled
   } from '@ant-design/icons';
+  import moment from "moment"
 import "../Styles/card.scss"
 
 const img = require("../images/avatar.png")
-export default function Card({ content,authName,authRole,authPic, source, link }) {
+
+export default function Card({ content,authName,authRole,authPic, source, link, date }) {
     return <div className="card w-2/3 m-auto bg-white boxshadow-3xl outline-none rounded-xl border-2 border-blue">
         <div className="card-content p-6 pt-8">
             <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,6 +16,10 @@ export default function Card({ content,authName,authRole,authPic, source, link }
 
             <p className="mt-8">
                 {content}
+            </p>
+            <p className="text-gray-400 text-sm">
+                {/* {!!date && moment(date)} */}
+                {moment(date, "MM-YYYY").format("MMMM, YYYY")}
             </p>
         </div>
         <div className="card-footer flex p-4 justify-between">

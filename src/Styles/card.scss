@@ -1,11 +1,37 @@
 .card {
   min-width: 50vw;
+  background-image: url(../images/world-dots.svg);
+  background-size: contain;
 }
 .card-footer {
   background: linear-gradient(91.09deg, #44ccff 5.59%, #3de6b4 100%);
   border-radius: 0px 0px 11px 11px;
 }
+.card-header {
+  background: linear-gradient(91.09deg, #44ccff 5.59%, #3de6b4 100%);
+  border-radius: 11px 11px 0px 0px;
+}
 
+.card-work{
+  overflow: hidden;
+  &:hover{
+    .card-content{
+      padding: 14px 14px;
+    }
+  }
+  .card-content{
+    transition: all ease .3s;
+  }
+}
+
+.card-content{
+  border-radius: 11px 11px 0px 0px;
+}
+
+.card-slider{
+  overflow: hidden;
+  padding: 12px;
+}
 .rec.rec-slider-container {
   margin: 0 auto;
 //   max-width: 52%;
@@ -45,4 +71,10 @@
             color:#44ccff !important;
         }
     }
+}
+.ant-timeline-item-right .ant-timeline-item-content{
+  text-align: left !important;
+}
+.ant-timeline-item-content {
+  top: -37.001px !important;
 }

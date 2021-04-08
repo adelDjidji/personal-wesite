@@ -6,13 +6,16 @@ import {
   GitlabFilled,
   FacebookFilled,
   GoogleOutlined,
-  LeftCircleOutlined,
-  RightCircleOutlined
 } from '@ant-design/icons';
 import Carousel,{ consts } from "react-elastic-carousel";
 // import Navbar from "../Components/Navbar";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css"; // This only needs to be imported once in the app
+
 import Particles from 'react-particles-js';
 import Card from "../Components/Card"
+import CardSlider from "../Components/CardSlider"
+import TimeLine from "../Components/TimeLine"
 
 import "react-image-lightbox/style.css"; // This only needs to be imported once in the app
 import "../Styles/landing.scss";
@@ -25,7 +28,50 @@ export default function Landing() {
   // const [isMobile,setisMobile] = useState(window.innerWidth < LIMIT_IS_MOBILE);
   const [pointer,setpointer] = useState({});
   const slider = useRef(null)
+  const [lightBoxState, setlightBoxState] = useState({
+    photoIndex: 0,
+    isOpen: false,
+  });
+  const imagesObj = [
+    {
+      src:"/img/certifs/guines.jpg",
+      alt:"guiness world record hadj hackathon saudi arabia 2018"
+    },
+    {
+      src:"/img/certifs/hajjHackathon.jpeg",
+      alt:"hadj hackathon saudi arabia 2018 adel djidjik"
+    },
+    {
+      src:"/img/certifs/770001_SFC_Adel Djidjik.jpg",
+      alt:"scrum fundamentals certfied adel djidjik"
+    },
+    {
+      src:"/img/certifs/datasceince.png",
+      alt:"data science fundamentals adel djidjik"
+    },
+    {
+      src:"/img/certifs/EFSET.png",
+      alt:"english test ef set C2 adel djidjik"
+    },
+    {
+      src:"/img/certifs/itil1.png",
+      alt:"itil formation adel djidjik"
+    },
+    {
+      src:"/img/certifs/itil2.png",
+      alt:"itil formation adel djidjik"
+    },
+    {
+      src:"/img/certifs/itil3.png",
+      alt:"itil formation adel djidjik"
+    },
+    {
+      src:"/img/certifs/webtrainer.png",
+      alt:"web training certificat adel djidjik"
+    },
+  ];
 
+  const images=imagesObj.map(img=>img.src)
   useEffect(() => {
     // setisMobile(window.innerWidth < LIMIT_IS_MOBILE);
     window.addEventListener("mousemove",mouseMove);
@@ -48,35 +94,9 @@ export default function Landing() {
     }
   };
 
-  const customArrow = ({ type,onClick }) => {
-    const arrow =
-      type === consts.PREV ? (
-        <div className="">
-          <LeftCircleOutlined />
-        </div>
-      ) : (
-        <div className="">
-          <RightCircleOutlined />
-        </div>
-      );
-    var offset = type === consts.PREV ? -1 : 1;
-    offset = parseInt(offset);
-    const handleClick = () => {
 
-      onClick();
-      // if (indexSlideshow + offset === 4) {
-      //   slider.current.goTo(0);
-      //   setindexSlideshow(1);
-      // } else {
-      //   if (indexSlideshow + offset > 0)
-      //     setindexSlideshow(indexSlideshow + offset);
-
-      // }
-    };
-    return <span onClick={handleClick}>{arrow}</span>;
-  };
   return (
-    <div className="">
+    <div className="app">
       <Content>
         <div className="landing-page-container">
           <Particles style={{
@@ -118,9 +138,14 @@ export default function Landing() {
 
           </section>
 
-          <section className="testmonial bg-white">
+          <section className="timeline bg-white">
+            <h1 className="text-4xl tex-gray text-center font-bold mb-12">Work experience</h1>
+            <TimeLine />
+          </section>
+          <section className="testmonial bg-gray-100">
 
             <h1 className="text-4xl tex-gray text-center font-bold mb-12">Testimonials</h1>
+
             <Carousel
               data-aos="fade-down"
               ref={slider}
@@ -128,11 +153,10 @@ export default function Landing() {
               breakPoints={[{ itemsToShow: 1,itemsToScroll: 1 }]}
               showArrows={true}
               pagination={true}
-              // renderArrow={customArrow}
               // transitionMs={300}
               enableSwipe={true}
-              enableAutoPlay 
-              autoPlaySpeed={4000}
+            // enableAutoPlay 
+            // autoPlaySpeed={10000}
             >
               <item>
                 <Card
@@ -205,11 +229,142 @@ export default function Landing() {
             </Carousel>
           </section>
 
+          <section className="portfolio bg-white">
+            <h1 className="text-4xl tex-gray text-center font-bold mb-12">Portfolio</h1>
+            <div className="flex flex-wrap justify-start">
+              <CardSlider
+              cover="/img/rwad.png"
+              projectName="Rwad platform"
+              link="https://rwad.tk/"
+              skills={["NEXT.JS","Strapi","React","Responsive","Git"]}
+              date="06-2020 - 08-2020"
+            />
+              <CardSlider
+              cover="/img/rwad.png"
+              projectName="Media analytics"
+              link="https://rwad.tk/"
+              skills={["React","Redux","Material-UI","Mongo","NodeJS","Gitlab"]}
+              date="12-2020 - 03-2021"
+            />
+              <CardSlider
+              cover="/img/rwad.png"
+              projectName="Cash consolidation and reporting"
+              link="https://rwad.tk/"
+              skills={["React","Redux","Material-UI","Mongo","NodeJS","Gitlab"]}
+              date="10-2020 - 12-2020"
+            />
+              <CardSlider
+              cover="/img/wo.png"
+              projectName="Wassit online"
+              link="https://wassitonline.anem.dz/"
+              skills={["AngularJS",".NET core","IdentityServer","SQL server","IIS","TFS","Visual studion","UML", "OAuth2"]}
+              date="12-2019 - 09-2020"
+            />
+              <CardSlider
+              cover="/img/sagepdf.png"
+              projectName="Pdf extractor"
+              link="https://sagepaiemailer.herokuapp.com/"
+              skills={["Python","Django","Heroku"]}
+              date="12-2019 - 09-2020"
+            />
+              <CardSlider
+              cover="/img/talent.png"
+              projectName="Talent performance | CEVITAL"
+              link=""
+              skills={["React","NodeJS","Antd","MYSQL","SocketIO","Flask","Data mining","Git","UML"]}
+              date="10-2018 - 08-2019"
+            />
+              <CardSlider
+              cover="/img/convert-0.png"
+              projectName="Convert portal website"
+              link="http://convert-website.herokuapp.com/"
+              skills={["React","JS","Antd","Responsive","Multi-lang","Heroku","Git"]}
+              date="06-2020 - 08-2020"
+            />
+            <CardSlider
+              cover="/img/tethyr_landing.png"
+              projectName="Tethyr website redesign"
+              link="http://tethyr.io/"
+              skills={["React","Redux","ES7","Antd","Responsive","Jenkinze","Git"]}
+              date="04-2020 - 06-2020"
+            />
+            <CardSlider
+              cover="/img/startups.Omran.jpg"
+              projectName="Omran startups platform"
+              link="startups.omran.org"
+              skills={["HTML","AJAX","JQuery","Responsive","Php","Git"]}
+              date="01-2020 - 03-2020"
+            />
+            <CardSlider
+              cover="/img/VISOR.jpg"
+              projectName="Visor web interface"
+              link=""
+              skills={["HTML","JS","Responsive","CSS","Git"]}
+              date="09-2020"
+            />
+            </div>
+            
+          </section>
+          <section className="certifs bg-gray-100">
+            <h1 className="text-4xl tex-gray text-center font-bold mb-12">Certificats and honors</h1>
+            {lightBoxState.isOpen && (
+              <Lightbox
+                mainSrc={images[lightBoxState.photoIndex]}
+                nextSrc={images[(lightBoxState.photoIndex + 1) % images.length]}
+                prevSrc={
+                  images[
+                    (lightBoxState.photoIndex + images.length - 1) %
+                      images.length
+                  ]
+                }
+                onCloseRequest={() =>
+                  setlightBoxState({ ...lightBoxState, isOpen: false })
+                }
+                onMovePrevRequest={() =>
+                  setlightBoxState({
+                    ...lightBoxState,
+                    photoIndex:
+                      (lightBoxState.photoIndex + images.length - 1) %
+                      images.length
+                  })
+                }
+                onMoveNextRequest={() =>
+                  setlightBoxState({
+                    ...lightBoxState,
+                    photoIndex:
+                    (lightBoxState.photoIndex + 1) % images.length
+                  })
+                }
+              />
+            )}
+            <Carousel
+              data-aos="fade-down"
+              // ref={slider}
+              className={`slide-show-caroussel`}
+              breakPoints={[{ itemsToShow: 3,itemsToScroll: 1 }]}
+              showArrows={true}
+              pagination={true}
+              // transitionMs={300}
+              enableSwipe={true}
+            // enableAutoPlay 
+            // autoPlaySpeed={10000}
+            >
+              {
+                imagesObj.map((img, idx)=><item onClick={() => setlightBoxState({photoIndex:idx, isOpen: true }) }>
+                <img src={img.src} alt={img.alt}/>
+              </item>)
+              }
+              
+              
+
+            </Carousel>
+          </section>
+
           <footer className="footer-landing">
             <Row>
 
               <Col className="text-center text-3xl" xs={24} sm={24} ms={24} lg={24} xl={24}>
-                <b>Comming soon! </b>
+                
               </Col>
 
             </Row>
