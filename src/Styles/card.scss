@@ -31,6 +31,12 @@
 .card-slider{
   overflow: hidden;
   padding: 12px;
+  .card-content{
+    border: solid 1px #44ccff50;
+  }
+  .card-footer{
+    height: calc( 100% - 20rem );
+  }
 }
 .rec.rec-slider-container {
   margin: 0 auto;

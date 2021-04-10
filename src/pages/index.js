@@ -211,18 +211,18 @@ export default function Landing() {
                   authRole="CRM and Digital Marketing Project Manager à Transdev, France"
                   source="linkedin"
                   link="https://www.linkedin.com/in/aghiles-djellouli/"
-                  date="07-2020"
+                  date="10-2018"
                 />
               </item>
               <item>
                 <Card
-                  content="Adel is among the best people I've met during my academic career, he is a brilliant element, he learns quickly and allows to boost his team with his human and professional qualities. I was his Android trainer to develop an application for an association, we worked together in the preparation of events organized by the clubs: CVE and GDG Algiers. I recommend him for his technical skills, his human and professional qualities."
+                  content="Adel is among the best people I've met during my academic career, he is a brilliant element, he learns quickly and allows to boost his team with his human and professional qualities. I was his Android trainer to develop an application for an association, we worked together in the preparation of events organized by the clubs: CVE and `Google Developers Group` Algiers. I recommend him for his technical skills, his human and professional qualities."
                   authName="Bouzid MEDJDOUB"
                   authPic="https://media-exp1.licdn.com/dms/image/C4D35AQF9ZlQOwkUjQA/profile-framedphoto-shrink_800_800/0/1602534092209?e=1617951600&v=beta&t=LLBThpLysQI4oYuBAkVX_DnTUZxuQCbqIYbCXpjnCRo"
                   authRole="Salesforce Technical Functional Consultant, France"
                   source="linkedin"
                   link="https://www.linkedin.com/in/bouzid-medjdoub/"
-                  date="06-2018"
+                  date="03-2018"
                 />
               </item>
 
@@ -235,55 +235,54 @@ export default function Landing() {
               <CardSlider
               cover="/img/rwad.png"
               projectName="Rwad platform"
+              projectDescription="platform for training centers and courses."
               link="https://rwad.tk/"
               skills={["NEXT.JS","Strapi","React","Responsive","Git"]}
-              date="06-2020 - 08-2020"
+              date="Since 09-2020"
             />
               <CardSlider
-              cover="/img/rwad.png"
+              cover="/img/mediaanalyti.png"
               projectName="Media analytics"
-              link="https://rwad.tk/"
-              skills={["React","Redux","Material-UI","Mongo","NodeJS","Gitlab"]}
+              projectDescription="Social media analytics (Facebook & Twitter)."
+              skills={["React","Redux","react-grid-layout","Material-UI","Mongo","NodeJS","Gitlab"]}
               date="12-2020 - 03-2021"
             />
               <CardSlider
-              cover="/img/rwad.png"
+              cover="/img/dfc.png"
               projectName="Cash consolidation and reporting"
-              link="https://rwad.tk/"
+              projectDescription="Web tool for Management of cash flow, bank accounts and reporting."
               skills={["React","Redux","Material-UI","Mongo","NodeJS","Gitlab"]}
               date="10-2020 - 12-2020"
             />
               <CardSlider
               cover="/img/wo.png"
               projectName="Wassit online"
+              projectDescription="National Employment platform (Algeria)."
               link="https://wassitonline.anem.dz/"
-              skills={["AngularJS",".NET core","IdentityServer","SQL server","IIS","TFS","Visual studion","UML", "OAuth2"]}
+              skills={["AngularJS",".NET core","IdentityServer","SQL server","IIS","TFS","UML", "OAuth2"]}
               date="12-2019 - 09-2020"
             />
               <CardSlider
               cover="/img/sagepdf.png"
               projectName="Pdf extractor"
+              projectDescription="Web app to extract and scplit PDF pages and send them by email."
               link="https://sagepaiemailer.herokuapp.com/"
               skills={["Python","Django","Heroku"]}
-              date="12-2019 - 09-2020"
+              date="06-2020"
             />
-              <CardSlider
-              cover="/img/talent.png"
-              projectName="Talent performance | CEVITAL"
-              link=""
-              skills={["React","NodeJS","Antd","MYSQL","SocketIO","Flask","Data mining","Git","UML"]}
-              date="10-2018 - 08-2019"
-            />
+              
               <CardSlider
               cover="/img/convert-0.png"
-              projectName="Convert portal website"
+              projectName="CONVERT portal website"
+              projectDescription="Finctech startup, Singapore"
               link="http://convert-website.herokuapp.com/"
               skills={["React","JS","Antd","Responsive","Multi-lang","Heroku","Git"]}
               date="06-2020 - 08-2020"
             />
             <CardSlider
               cover="/img/tethyr_landing.png"
-              projectName="Tethyr website redesign"
+              projectName="TETHYR website redesign"
+              projectDescription=""
               link="http://tethyr.io/"
               skills={["React","Redux","ES7","Antd","Responsive","Jenkinze","Git"]}
               date="04-2020 - 06-2020"
@@ -291,16 +290,25 @@ export default function Landing() {
             <CardSlider
               cover="/img/startups.Omran.jpg"
               projectName="Omran startups platform"
+              projectDescription="Platform to help and accelerate startups ideas"
               link="startups.omran.org"
               skills={["HTML","AJAX","JQuery","Responsive","Php","Git"]}
-              date="01-2020 - 03-2020"
+              date="01-2019 - 03-2019"
+            />
+            <CardSlider
+              cover="/img/talent.png"
+              projectName="Talent performance | CEVITAL"
+              projectDescription="Manage the performance of huma resources."
+              link=""
+              skills={["React","NodeJS","Antd","MYSQL","SocketIO","Flask","Data mining","Git","UML"]}
+              date="10-2018 - 08-2019"
             />
             <CardSlider
               cover="/img/VISOR.jpg"
               projectName="Visor web interface"
               link=""
               skills={["HTML","JS","Responsive","CSS","Git"]}
-              date="09-2020"
+              date="09-2018"
             />
             </div>
             

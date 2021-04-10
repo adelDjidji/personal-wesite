@@ -82,7 +82,11 @@ item{
   max-height: 300px;
 }
 }
-
+span.ant-tag {
+  border-radius: 14pt;
+  border: none;
+  margin-top: 4px;
+}
 .social a {
   border: solid 1px black;
   padding: 8px;
