@@ -4,12 +4,12 @@ import { Popover,Button } from 'antd';
 import "../Styles/card.scss"
 
 const img = require("../images/avatar.png")
-export default function Card({ content,companyName,role,companyLogo,link,address,period = "" }) {
+export default function Card({ content,companyName,role,companyLogo,link,address,period = "", isMobile=false }) {
     return (
         <div className="card-work m-auto bg-white boxshadow-3xl outline-none rounded-xl border-2 border-blue">
-            <Popover content={content}>
+            <Popover content={isMobile ? content : null}>
                 <div className="card-header flex p-4 justify-between">
-                    <div className="auth flex ">
+                    <div className="auth md:flex block">
                         <a className="" href={link} target="_blank" rel="noreferrer" title={`visit ${companyName}'s profile`}>
                             {
                                 (companyLogo && companyLogo !== "") ?
@@ -38,7 +38,7 @@ export default function Card({ content,companyName,role,companyLogo,link,address
                     </div> */}
                 </div>
             </Popover>
-            <div className="card-content p-6 block sm:hidden">
+            <div className="card-content p-6 block md:hidden">
                 <p className="mt-8">
                     {content}
                 </p>

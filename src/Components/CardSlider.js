@@ -6,12 +6,12 @@ import { Tag,Tooltip } from 'antd';
 import "../Styles/card.scss"
 
 export default function Card({ projectName,skills,link,date,cover, projectDescription }) {
-    return <div className="card-slider w-1/3 bg-white boxshadow-3xl outline-none rounded-xl">
+    return <div className="card-slider w-full md:w-1/3 bg-white boxshadow-3xl outline-none rounded-xl">
         <div className="card-content h-80 bg-cover bg-center" style={{ backgroundImage: `url(${cover})` }}>
 
         </div>
         <div className="card-footer flex p-4 justify-between">
-            <div className="auth flex ">
+            <div className="auth flex">
 
                 <div className="block">
                     <b className="text-white font-bold">{projectName}</b><br />
@@ -47,9 +47,6 @@ export default function Card({ projectName,skills,link,date,cover, projectDescri
                             case "Php":
                             case "MYSQL":
                                 color = "orange"
-                                break;
-                            case "":
-                                color = ""
                                 break;
 
                             default:

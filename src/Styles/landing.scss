@@ -74,7 +74,7 @@ item{
   // background-size: cover;
   // background-position: right;
 }
-.timeline, .portfolio, .certifs{
+.timeline, .portfolio, .certifs, footer{
   padding: 8vh 9vw;
 }
 .certifs{
@@ -86,6 +86,14 @@ span.ant-tag {
   border-radius: 14pt;
   border: none;
   margin-top: 4px;
+}
+footer{
+  background-color: #226c88;
+  min-height: 20vh;
+  // height: 50vh;
+  img{
+    max-height: 100%;
+  }
 }
 .social a {
   border: solid 1px black;

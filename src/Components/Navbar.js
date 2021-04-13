@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Navbar() {
     return <nav className="bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                     <div className="flex-shrink-0">
@@ -78,7 +78,7 @@ export default function Navbar() {
 
         {/* <!-- Mobile menu, show/hide based on menu state. --> */}
         <div className="md:hidden" id="mobile-menu">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="px-2 pt-2 pb-3 space-y-1 md:px-3">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                 <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
 

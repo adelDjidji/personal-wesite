@@ -8,172 +8,30 @@
   @media (max-width: 767px) {
     /** Commom-begin */
   
-    .container {
-      padding: 30px 15px !important;
+    .testmonial{
+      padding: 4vh 4vw;
     }
-  
-    .left-col {
-      padding-right: 0px !important;
-    }
-  
-    .only-mobile {
-      display: inline !important;
-    }
-  
-    /** Common-end **/
-  
-    /** navbar-begin */
-  
-    .nav-header.ant-layout-header {
-      padding: 0 19px !important;
-    }
-  
-    .logo-nav {
-      text-align: center !important;
-      border: none !important;
-    }
-  
-    .nav-header.ant-layout-header .ant-avatar {
-      position: absolute;
-      top: 13px;
-      right: 0;
-    }
-  
-    div.toggle-container {
-      top: 20px;
-      position: fixed;
-      z-index: 4;
-      right: 71px;
-    }
-  
-    /** /navbar-end */
-  
-    /** home-page-content-begin */
-  
-    .btn-open {
-      width: 42% !important;
-    }
-  
-    .btn-add-playlist {
-      width: 51% !important;
-    }
-  
-    .btns-top-right {
-      margin-bottom: 16px !important;
-    }
-  
-    /* cards-begin */
-  
-    div {
-      &.ant-card-body {
-        padding: 20px 14px !important;
-  
-        .card-title .icon {
-          margin-right: 14px !important;
-        }
-      }
-  
-      &.card-content {
-        margin-top: 19px !important;
-      }
-    }
-  
-    .card-footer {
-      display: none !important;
-    }
-  
-    /** /cards-end */
-  
-    /** /home-page-content-end */
-  
-    /** manager page begin ***/
-  
-    .list-plg-item {
-      padding: 16px 18px !important;
-    }
-  
-    .list-vd-item {
-      padding: 15px !important;
-    }
-  
-    .header-PL h1 {
-      margin-top: 7px;
-      font-size: 1.5em !important;
-      margin-bottom: 1.5em !important;
-    }
-  
-    .history a {
-      font-size: 0.85em !important;
-    }
-  
-    .overview-row {
-      text-align: center;
-      margin-top: 20px;
-      border-bottom: solid 1px #D4D8DD;
-      padding-bottom: 1em;
-    }
-  
-    main.container.container-manager.ant-layout-content {
-      &.PL {
-        background-size: initial !important;
-      }
-  
-      &.VD {
-        background-size: cover !important;
-      }
-    }
-  
-    .pagination-row .ant-col {
-      justify-content: space-between !important;
-    }
-  
-    .ant-tabs-tab {
-      padding: 9px !important;
-      font-size: 11px;
-      margin-right: 2px;
+    .timeline, .portfolio, .certifs, footer{
+      padding: 4vh 3vw;
     }
   
     /** manager page end ***/
   }
   
   @media (max-width: 360px) {
-    .author-card-icon-text {
-      display: none;
-    }
-  
-    .author-card-name {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      max-width: 13ch;
-      white-space: nowrap;
-      float: right;
-    }
+    
   }
   
   /**
   MD and more
   */
   @media (min-width: 991px) {
-    .flex-end {
-      display: flex !important;
-    }
-  
-    .middle-align:not(.ant-col-xl-0) {
-      display: flex !important;
-      align-items: center !important;
-    }
+   
   }
   
   /**
   MD and less
   */
   @media (max-width: 991px) {
-    .middle-align {
-      &:not(.ant-col-xs-0) {
-        display: flex !important;
-      }
-  
-      display: flex;
-      align-items: center !important;
-    }
+   
   }

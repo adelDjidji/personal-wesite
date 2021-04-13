@@ -6,6 +6,9 @@ import {
   GitlabFilled,
   FacebookFilled,
   GoogleOutlined,
+  MailFilled,
+  PhoneFilled,
+  EnvironmentFilled
 } from '@ant-design/icons';
 import Carousel,{ consts } from "react-elastic-carousel";
 // import Navbar from "../Components/Navbar";
@@ -25,53 +28,53 @@ const { Content } = Layout;
 const LIMIT_IS_MOBILE = 610;
 
 export default function Landing() {
-  // const [isMobile,setisMobile] = useState(window.innerWidth < LIMIT_IS_MOBILE);
+  const [isMobile,setisMobile] = useState(window.innerWidth < LIMIT_IS_MOBILE);
   const [pointer,setpointer] = useState({});
   const slider = useRef(null)
-  const [lightBoxState, setlightBoxState] = useState({
+  const [lightBoxState,setlightBoxState] = useState({
     photoIndex: 0,
     isOpen: false,
   });
   const imagesObj = [
     {
-      src:"/img/certifs/guines.jpg",
-      alt:"guiness world record hadj hackathon saudi arabia 2018"
+      src: "/img/certifs/guines.jpg",
+      alt: "guiness world record hadj hackathon saudi arabia 2018"
     },
     {
-      src:"/img/certifs/hajjHackathon.jpeg",
-      alt:"hadj hackathon saudi arabia 2018 adel djidjik"
+      src: "/img/certifs/hajjHackathon.jpeg",
+      alt: "hadj hackathon saudi arabia 2018 adel djidjik"
     },
     {
-      src:"/img/certifs/770001_SFC_Adel Djidjik.jpg",
-      alt:"scrum fundamentals certfied adel djidjik"
+      src: "/img/certifs/770001_SFC_Adel Djidjik.jpg",
+      alt: "scrum fundamentals certfied adel djidjik"
     },
     {
-      src:"/img/certifs/datasceince.png",
-      alt:"data science fundamentals adel djidjik"
+      src: "/img/certifs/datasceince.png",
+      alt: "data science fundamentals adel djidjik"
     },
     {
-      src:"/img/certifs/EFSET.png",
-      alt:"english test ef set C2 adel djidjik"
+      src: "/img/certifs/EFSET.png",
+      alt: "english test ef set C2 adel djidjik"
     },
     {
-      src:"/img/certifs/itil1.png",
-      alt:"itil formation adel djidjik"
+      src: "/img/certifs/itil1.png",
+      alt: "itil formation adel djidjik"
     },
     {
-      src:"/img/certifs/itil2.png",
-      alt:"itil formation adel djidjik"
+      src: "/img/certifs/itil2.png",
+      alt: "itil formation adel djidjik"
     },
     {
-      src:"/img/certifs/itil3.png",
-      alt:"itil formation adel djidjik"
+      src: "/img/certifs/itil3.png",
+      alt: "itil formation adel djidjik"
     },
     {
-      src:"/img/certifs/webtrainer.png",
-      alt:"web training certificat adel djidjik"
+      src: "/img/certifs/webtrainer.png",
+      alt: "web training certificat adel djidjik"
     },
   ];
 
-  const images=imagesObj.map(img=>img.src)
+  const images = imagesObj.map(img => img.src)
   useEffect(() => {
     // setisMobile(window.innerWidth < LIMIT_IS_MOBILE);
     window.addEventListener("mousemove",mouseMove);
@@ -88,9 +91,9 @@ export default function Landing() {
   }
   const updateDimensions = () => {
     if (window.innerWidth < LIMIT_IS_MOBILE) {
-      // setisMobile(true);
+      setisMobile(true);
     } else {
-      // setisMobile(false);
+      setisMobile(false);
     }
   };
 
@@ -152,7 +155,7 @@ export default function Landing() {
               className={`slide-show-caroussel`}
               breakPoints={[{ itemsToShow: 1,itemsToScroll: 1 }]}
               showArrows={true}
-              pagination={true}
+              pagination={!isMobile}
               // transitionMs={300}
               enableSwipe={true}
             // enableAutoPlay 
@@ -233,85 +236,85 @@ export default function Landing() {
             <h1 className="text-4xl tex-gray text-center font-bold mb-12">Portfolio</h1>
             <div className="flex flex-wrap justify-start">
               <CardSlider
-              cover="/img/rwad.png"
-              projectName="Rwad platform"
-              projectDescription="platform for training centers and courses."
-              link="https://rwad.tk/"
-              skills={["NEXT.JS","Strapi","React","Responsive","Git"]}
-              date="Since 09-2020"
-            />
+                cover="/img/rwad.png"
+                projectName="Rwad platform"
+                projectDescription="platform for training centers and courses."
+                link="https://rwad.tk/"
+                skills={["NEXT.JS","Strapi","React","Responsive","Git"]}
+                date="Since 09-2020"
+              />
               <CardSlider
-              cover="/img/mediaanalyti.png"
-              projectName="Media analytics"
-              projectDescription="Social media analytics (Facebook & Twitter)."
-              skills={["React","Redux","react-grid-layout","Material-UI","Mongo","NodeJS","Gitlab"]}
-              date="12-2020 - 03-2021"
-            />
+                cover="/img/mediaanalyti.png"
+                projectName="Media analytics"
+                projectDescription="Social media analytics (Facebook & Twitter)."
+                skills={["React","Redux","react-grid-layout","Material-UI","Mongo","NodeJS","Gitlab"]}
+                date="12-2020 - 03-2021"
+              />
               <CardSlider
-              cover="/img/dfc.png"
-              projectName="Cash consolidation and reporting"
-              projectDescription="Web tool for Management of cash flow, bank accounts and reporting."
-              skills={["React","Redux","Material-UI","Mongo","NodeJS","Gitlab"]}
-              date="10-2020 - 12-2020"
-            />
+                cover="/img/dfc.png"
+                projectName="Cash consolidation and reporting"
+                projectDescription="Web tool for Management of cash flow, bank accounts and reporting."
+                skills={["React","Redux","Material-UI","Mongo","NodeJS","Gitlab"]}
+                date="10-2020 - 12-2020"
+              />
               <CardSlider
-              cover="/img/wo.png"
-              projectName="Wassit online"
-              projectDescription="National Employment platform (Algeria)."
-              link="https://wassitonline.anem.dz/"
-              skills={["AngularJS",".NET core","IdentityServer","SQL server","IIS","TFS","UML", "OAuth2"]}
-              date="12-2019 - 09-2020"
-            />
+                cover="/img/wo.png"
+                projectName="Wassit online"
+                projectDescription="National Employment platform (Algeria)."
+                link="https://wassitonline.anem.dz/"
+                skills={["AngularJS",".NET core","IdentityServer","SQL server","IIS","TFS","UML","OAuth2"]}
+                date="12-2019 - 09-2020"
+              />
               <CardSlider
-              cover="/img/sagepdf.png"
-              projectName="Pdf extractor"
-              projectDescription="Web app to extract and scplit PDF pages and send them by email."
-              link="https://sagepaiemailer.herokuapp.com/"
-              skills={["Python","Django","Heroku"]}
-              date="06-2020"
-            />
-              
+                cover="/img/sagepdf.png"
+                projectName="Pdf extractor"
+                projectDescription="Web app to extract and scplit PDF pages and send them by email."
+                link="https://sagepaiemailer.herokuapp.com/"
+                skills={["Python","Django","Heroku"]}
+                date="06-2020"
+              />
+
               <CardSlider
-              cover="/img/convert-0.png"
-              projectName="CONVERT portal website"
-              projectDescription="Finctech startup, Singapore"
-              link="http://convert-website.herokuapp.com/"
-              skills={["React","JS","Antd","Responsive","Multi-lang","Heroku","Git"]}
-              date="06-2020 - 08-2020"
-            />
-            <CardSlider
-              cover="/img/tethyr_landing.png"
-              projectName="TETHYR website redesign"
-              projectDescription=""
-              link="http://tethyr.io/"
-              skills={["React","Redux","ES7","Antd","Responsive","Jenkinze","Git"]}
-              date="04-2020 - 06-2020"
-            />
-            <CardSlider
-              cover="/img/startups.Omran.jpg"
-              projectName="Omran startups platform"
-              projectDescription="Platform to help and accelerate startups ideas"
-              link="startups.omran.org"
-              skills={["HTML","AJAX","JQuery","Responsive","Php","Git"]}
-              date="01-2019 - 03-2019"
-            />
-            <CardSlider
-              cover="/img/talent.png"
-              projectName="Talent performance | CEVITAL"
-              projectDescription="Manage the performance of huma resources."
-              link=""
-              skills={["React","NodeJS","Antd","MYSQL","SocketIO","Flask","Data mining","Git","UML"]}
-              date="10-2018 - 08-2019"
-            />
-            <CardSlider
-              cover="/img/VISOR.jpg"
-              projectName="Visor web interface"
-              link=""
-              skills={["HTML","JS","Responsive","CSS","Git"]}
-              date="09-2018"
-            />
+                cover="/img/convert-0.png"
+                projectName="CONVERT portal website"
+                projectDescription="Finctech startup, Singapore"
+                link="http://convert-website.herokuapp.com/"
+                skills={["React","JS","Antd","Responsive","Multi-lang","Heroku","Git"]}
+                date="06-2020 - 08-2020"
+              />
+              <CardSlider
+                cover="/img/tethyr_landing.png"
+                projectName="TETHYR website redesign"
+                projectDescription=""
+                link="http://tethyr.io/"
+                skills={["React","Redux","ES7","Antd","Responsive","Jenkinze","Git"]}
+                date="04-2020 - 06-2020"
+              />
+              <CardSlider
+                cover="/img/startups.Omran.jpg"
+                projectName="Omran startups platform"
+                projectDescription="Platform to help and accelerate startups ideas"
+                link="startups.omran.org"
+                skills={["HTML","AJAX","JQuery","Responsive","Php","Git"]}
+                date="01-2019 - 03-2019"
+              />
+              <CardSlider
+                cover="/img/talent.png"
+                projectName="Talent performance | CEVITAL"
+                projectDescription="Manage the performance of huma resources."
+                link=""
+                skills={["React","NodeJS","Antd","MYSQL","SocketIO","Flask","Data mining","Git","UML"]}
+                date="10-2018 - 08-2019"
+              />
+              <CardSlider
+                cover="/img/VISOR.jpg"
+                projectName="Visor web interface"
+                link=""
+                skills={["HTML","JS","Responsive","CSS","Git"]}
+                date="09-2018"
+              />
             </div>
-            
+
           </section>
           <section className="certifs bg-gray-100">
             <h1 className="text-4xl tex-gray text-center font-bold mb-12">Certificats and honors</h1>
@@ -321,12 +324,12 @@ export default function Landing() {
                 nextSrc={images[(lightBoxState.photoIndex + 1) % images.length]}
                 prevSrc={
                   images[
-                    (lightBoxState.photoIndex + images.length - 1) %
-                      images.length
+                  (lightBoxState.photoIndex + images.length - 1) %
+                  images.length
                   ]
                 }
                 onCloseRequest={() =>
-                  setlightBoxState({ ...lightBoxState, isOpen: false })
+                  setlightBoxState({ ...lightBoxState,isOpen: false })
                 }
                 onMovePrevRequest={() =>
                   setlightBoxState({
@@ -340,7 +343,7 @@ export default function Landing() {
                   setlightBoxState({
                     ...lightBoxState,
                     photoIndex:
-                    (lightBoxState.photoIndex + 1) % images.length
+                      (lightBoxState.photoIndex + 1) % images.length
                   })
                 }
               />
@@ -349,33 +352,47 @@ export default function Landing() {
               data-aos="fade-down"
               // ref={slider}
               className={`slide-show-caroussel`}
-              breakPoints={[{ itemsToShow: 3,itemsToScroll: 1 }]}
+              breakPoints={[{ itemsToShow: isMobile ? 1 : 3,itemsToScroll: 1 }]}
               showArrows={true}
-              pagination={true}
+              pagination={!isMobile}
               // transitionMs={300}
               enableSwipe={true}
             // enableAutoPlay 
             // autoPlaySpeed={10000}
             >
               {
-                imagesObj.map((img, idx)=><item onClick={() => setlightBoxState({photoIndex:idx, isOpen: true }) }>
-                <img src={img.src} alt={img.alt}/>
-              </item>)
+                imagesObj.map((img,idx) => <item onClick={() => setlightBoxState({ photoIndex: idx,isOpen: true })}>
+                  <img src={img.src} alt={img.alt} />
+                </item>)
               }
-              
-              
+
+
 
             </Carousel>
           </section>
 
-          <footer className="footer-landing">
-            <Row>
+          <footer className="footer-landing block md:flex ">
+            <div className="md:w-1/2 w-full block text-white">
+              <h1 className="text-4xl text-center text-white font-bold mb-12">Let's connect!</h1>
+              <div>
+                <div className="py-4 text-lg">
+                  <MailFilled /> djidjik.adel.sp@gmail.com
+                </div>
+                <div className="py-4 text-lg">
+                  <PhoneFilled /> (+213) 669 479 443
+                </div>
+                <div className="py-4 text-lg">
+                  <EnvironmentFilled /> 19700 Beni ourtilane, Sétif, Algeria
+                </div>
+              </div>
 
-              <Col className="text-center text-3xl" xs={24} sm={24} ms={24} lg={24} xl={24}>
-                
-              </Col>
 
-            </Row>
+            </div>
+            <div className="md:w-1/2 w-full flex">
+              <img src="/img/undraw_business_deal_cpi9.svg" alt="" />
+
+            </div>
+
           </footer>
         </div>
       </Content>
