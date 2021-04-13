@@ -12,5 +12,5 @@ jobs:
       run: echo azul Adel
     - name: Run two lines
       run: |
-        echo a line 1
-        echo test line 2
+        echo user ${{ secrets.{VPS_USER} }}
+        
