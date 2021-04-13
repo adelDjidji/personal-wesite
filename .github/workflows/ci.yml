@@ -12,5 +12,10 @@ jobs:
       run: echo azul Adel
     - name: Run two test
       run: |
-        echo user ${{ secrets.VPS_USER }}
+        ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_ADR }}
+        ${{ secrets.VPS_PWD }}
+        cd apps
+        cd personal-website
+        git pull
+        pm1 restart personal-website
         
