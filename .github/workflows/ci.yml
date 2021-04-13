@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run one line code
       run: echo azul Adel
-    - name: Run two lines
+    - name: Run two test
       run: |
         echo user ${{ secrets.VPS_USER }}
         
