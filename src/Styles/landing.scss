@@ -54,7 +54,7 @@ p, b {
   }
 }
 // background-image: url(/landing-page/first-screen-ellipse.png);
-.landing-page-container .section1 {
+.landing-page-container .section1{
   background: linear-gradient(45deg, #65d2a5 0%, #2fbcd8 100%), #ffffff !important;
   min-height: 100vh;
   div.img-me {
@@ -127,3 +127,46 @@ footer{
   }
 }
 
+.typeform-share.button {
+  width: 94px;
+  height: 54px;
+  position: fixed;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06), 0px 2px 4px rgba(0, 0, 0, 0.08);
+  right: 26px;
+  bottom: 26px;
+  border-radius: 15pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #0445af;
+  overflow: hidden;
+  line-height: 0;
+}
+.about.button {
+  width: 184px;
+  height: 54px;
+  position: fixed;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06), 0px 2px 4px rgba(0, 0, 0, 0.08);
+  left: 26px;
+  bottom: 26px;
+  border-radius: 15pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #f7df1e;
+  overflow: hidden;
+  line-height: 0;
+}
+.web-svg{
+  min-height: 100vh;
+  background-image: url(../images/html-svg.svg);
+    background-color: #65d2a5;
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    h1{
+
+    }
+}

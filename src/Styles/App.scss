@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 * {
-  transition: all ease .3s;
+  transition: all ease 0.3s;
 }
 
 div {
@@ -37,9 +37,11 @@ div {
 }
 
 .white-mode {
-  .white, .btn-open, span.hashtag {
-    color: #1F2941 !important;
-    border-color: #1F2941 !important;
+  .white,
+  .btn-open,
+  span.hashtag {
+    color: #1f2941 !important;
+    border-color: #1f2941 !important;
   }
 }
 
@@ -50,7 +52,7 @@ div {
 /* Button styles **/
 
 .btn-success {
-  background-color: #56B05B !important;
+  background-color: #56b05b !important;
   border: none !important;
   padding: 8px 18px !important;
   height: unset !important;
@@ -78,7 +80,8 @@ div {
     background: #80808024 !important;
   }
 
-  &:active, &:link {
+  &:active,
+  &:link {
     background: #8080804f !important;
   }
 }
@@ -135,9 +138,10 @@ main.container.container-manager {
   }
 }
 
-hr.line, .hr {
+hr.line,
+.hr {
   margin: 0;
-  border-color: #D4D8DD;
+  border-color: #d4d8dd;
   margin-block-end: 8px;
   margin-block-start: 8px;
 }
@@ -167,7 +171,7 @@ h3 {
 .list-hashtags {
   display: flex !important;
   flex-wrap: wrap;
-  width: calc( 100% + 19px );
+  width: calc(100% + 19px);
 }
 
 section.section {
@@ -178,7 +182,7 @@ span.hashtag {
   font-size: 18px;
   color: rgba(255, 255, 255, 0.65);
   margin-right: 19px;
-  opacity: .65;
+  opacity: 0.65;
 }
 
 .L-1 {
@@ -222,6 +226,18 @@ span.caroussel-title {
   font-weight: 500;
   font-size: 1.2em;
   line-height: 1;
-  color: #1F2941;
+  color: #1f2941;
   position: absolute;
+}
+
+
+.rt{
+  background: red;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 20vh;
+  left: 50vw;
+  padding: 2em;
+  border-radius: 50%;
 }
