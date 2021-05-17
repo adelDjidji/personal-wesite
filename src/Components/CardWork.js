@@ -7,7 +7,7 @@ const img = require("../images/avatar.png")
 export default function Card({ content,companyName,role,companyLogo,link,address,period = "", isMobile=false }) {
     return (
         <div className="card-work m-auto bg-white boxshadow-3xl outline-none rounded-xl border-2 border-blue">
-            <Popover content={isMobile ? content : null}>
+            <Popover content={ content }>
                 <div className="card-header flex p-4 justify-between">
                     <div className="auth md:flex block">
                         <a className="" href={link} target="_blank" rel="noreferrer" title={`visit ${companyName}'s profile`}>
